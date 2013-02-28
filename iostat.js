@@ -1,4 +1,4 @@
-var sys = require('sys'),
+var sys = require('util'),
     spawn = require('child_process').spawn,
     //app = require('http').createServer(handler),
     express = require('express'),
@@ -7,7 +7,7 @@ var sys = require('sys'),
     all_disks = {},
     columns = [];
 
-var app = express.createServer();
+var app = express();
 app.configure(function () {
   app.use(express.errorHandler({dumpExceptions: true, showStack: true}));
 });
